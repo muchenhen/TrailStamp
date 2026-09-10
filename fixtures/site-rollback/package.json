@@ -1,0 +1,11 @@
+{
+  "name": "gpslog-site-rollback-fixture",
+  "private": true,
+  "scripts": {
+    "locations:backfill": "node scripts/fail-after-mutation.js",
+    "maps:validate": "node scripts/pass.js",
+    "test": "node scripts/pass.js",
+    "typecheck": "node scripts/pass.js",
+    "build": "node scripts/pass.js"
+  }
+}

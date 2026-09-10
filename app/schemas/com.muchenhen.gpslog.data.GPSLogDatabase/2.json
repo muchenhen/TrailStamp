@@ -1,0 +1,358 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "34b650b697d313a90dfb7823e993a5df",
+    "entities": [
+      {
+        "tableName": "track_sessions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `startedAtUtc` INTEGER NOT NULL, `endedAtUtc` INTEGER, `timeZone` TEXT NOT NULL, `status` TEXT NOT NULL, `profile` TEXT NOT NULL, `targetIntervalSeconds` INTEGER NOT NULL, `minIntervalSeconds` INTEGER NOT NULL, `maxBatchDelaySeconds` INTEGER NOT NULL, `adminLookupEnabled` INTEGER NOT NULL, `rawPointCount` INTEGER NOT NULL, `usablePointCount` INTEGER NOT NULL, `gapCount` INTEGER NOT NULL, `interruptionReason` TEXT, `uploadStatus` TEXT NOT NULL DEFAULT 'not_configured', `uploadRevisionSha256` TEXT, `uploadAttemptCount` INTEGER NOT NULL DEFAULT 0, `uploadLastErrorCode` TEXT, `uploadLastAttemptAtUtc` INTEGER, `uploadedAtUtc` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAtUtc",
+            "columnName": "startedAtUtc",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endedAtUtc",
+            "columnName": "endedAtUtc",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "timeZone",
+            "columnName": "timeZone",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profile",
+            "columnName": "profile",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetIntervalSeconds",
+            "columnName": "targetIntervalSeconds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minIntervalSeconds",
+            "columnName": "minIntervalSeconds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxBatchDelaySeconds",
+            "columnName": "maxBatchDelaySeconds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "adminLookupEnabled",
+            "columnName": "adminLookupEnabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rawPointCount",
+            "columnName": "rawPointCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usablePointCount",
+            "columnName": "usablePointCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gapCount",
+            "columnName": "gapCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "interruptionReason",
+            "columnName": "interruptionReason",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "uploadStatus",
+            "columnName": "uploadStatus",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'not_configured'"
+          },
+          {
+            "fieldPath": "uploadRevisionSha256",
+            "columnName": "uploadRevisionSha256",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "uploadAttemptCount",
+            "columnName": "uploadAttemptCount",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "uploadLastErrorCode",
+            "columnName": "uploadLastErrorCode",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "uploadLastAttemptAtUtc",
+            "columnName": "uploadLastAttemptAtUtc",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "uploadedAtUtc",
+            "columnName": "uploadedAtUtc",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "track_points",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT NOT NULL, `timestampUtc` INTEGER NOT NULL, `elapsedRealtimeNanos` INTEGER NOT NULL, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `altitudeMeters` REAL, `accuracyMeters` REAL, `verticalAccuracyMeters` REAL, `speedMps` REAL, `bearingDegrees` REAL, `provider` TEXT, `isMock` INTEGER NOT NULL, `usable` INTEGER NOT NULL, `country` TEXT, `province` TEXT, `city` TEXT, `district` TEXT, `name` TEXT, `adminSource` TEXT, `adminResolvedAtUtc` INTEGER, FOREIGN KEY(`sessionId`) REFERENCES `track_sessions`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionId",
+            "columnName": "sessionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestampUtc",
+            "columnName": "timestampUtc",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "elapsedRealtimeNanos",
+            "columnName": "elapsedRealtimeNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "altitudeMeters",
+            "columnName": "altitudeMeters",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "accuracyMeters",
+            "columnName": "accuracyMeters",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "verticalAccuracyMeters",
+            "columnName": "verticalAccuracyMeters",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "speedMps",
+            "columnName": "speedMps",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "bearingDegrees",
+            "columnName": "bearingDegrees",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "provider",
+            "columnName": "provider",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "isMock",
+            "columnName": "isMock",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usable",
+            "columnName": "usable",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "province",
+            "columnName": "province",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "district",
+            "columnName": "district",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "adminSource",
+            "columnName": "adminSource",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "adminResolvedAtUtc",
+            "columnName": "adminResolvedAtUtc",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_track_points_sessionId_timestampUtc",
+            "unique": true,
+            "columnNames": [
+              "sessionId",
+              "timestampUtc"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_track_points_sessionId_timestampUtc` ON `${TABLE_NAME}` (`sessionId`, `timestampUtc`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "track_sessions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "sessionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "admin_cache",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gridKey` TEXT NOT NULL, `centerLatitude` REAL NOT NULL, `centerLongitude` REAL NOT NULL, `country` TEXT, `province` TEXT, `city` TEXT, `district` TEXT, `name` TEXT, `source` TEXT NOT NULL, `resolvedAtUtc` INTEGER NOT NULL, PRIMARY KEY(`gridKey`))",
+        "fields": [
+          {
+            "fieldPath": "gridKey",
+            "columnName": "gridKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "centerLatitude",
+            "columnName": "centerLatitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "centerLongitude",
+            "columnName": "centerLongitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "province",
+            "columnName": "province",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "district",
+            "columnName": "district",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resolvedAtUtc",
+            "columnName": "resolvedAtUtc",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "gridKey"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '34b650b697d313a90dfb7823e993a5df')"
+    ]
+  }
+}

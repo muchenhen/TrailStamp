@@ -1,0 +1,57 @@
+{
+  "schema": "gpslog.track/v1",
+  "session": {
+    "id": "00000000-0000-4000-8000-000000000001",
+    "startedAt": "2000-01-01T00:00:00Z",
+    "endedAt": "2000-01-01T00:10:00Z",
+    "timeZone": "UTC",
+    "profile": "endurance",
+    "targetIntervalSeconds": 240,
+    "status": "completed",
+    "gapCount": 0
+  },
+  "points": [
+    {
+      "timestampUtc": "2000-01-01T00:02:00Z",
+      "elapsedRealtimeNanos": 1000000000,
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "altitudeMeters": 8.0,
+      "accuracyMeters": 12.0,
+      "verticalAccuracyMeters": 4.0,
+      "speedMps": 0.0,
+      "bearingDegrees": 0.0,
+      "provider": "fixture",
+      "isMock": false,
+      "usable": true,
+      "admin": {
+        "country": "示例国家",
+        "province": "示例省份",
+        "city": "示例城市",
+        "district": "示例地区",
+        "name": "示例地点"
+      }
+    },
+    {
+      "timestampUtc": "2000-01-01T00:06:00Z",
+      "elapsedRealtimeNanos": 241000000000,
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "altitudeMeters": 8.0,
+      "accuracyMeters": 12.0,
+      "verticalAccuracyMeters": 4.0,
+      "speedMps": 0.0,
+      "bearingDegrees": 0.0,
+      "provider": "fixture",
+      "isMock": false,
+      "usable": true,
+      "admin": {
+        "country": "示例国家",
+        "province": "示例省份",
+        "city": "示例城市",
+        "district": "示例地区",
+        "name": "示例地点"
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "mu.travel.gps-match-cases/v1",
+  "algorithmVersion": "gpslog-rust-compatible/v1",
+  "tracks": {
+    "sixMinutes": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000001", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:06:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "accuracyMeters": 200.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:06:00Z", "elapsedRealtimeNanos": 2, "latitude": 31.006, "longitude": 121.006, "altitudeMeters": 6.0, "accuracyMeters": 200.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "tenMinutes": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000002", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:10:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "accuracyMeters": 100.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:10:00Z", "elapsedRealtimeNanos": 2, "latitude": 31.01, "longitude": 121.01, "altitudeMeters": 10.0, "accuracyMeters": 100.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "overTenMinutes": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000003", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:10:00.001Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "accuracyMeters": 100.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:10:00.001Z", "elapsedRealtimeNanos": 2, "latitude": 31.01, "longitude": 121.01, "altitudeMeters": 10.0, "accuracyMeters": 100.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "duplicates": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000004", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:05:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "accuracyMeters": 40.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 2, "latitude": 30.0, "longitude": 120.0, "altitudeMeters": 1.0, "accuracyMeters": 5.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:05:00Z", "elapsedRealtimeNanos": 3, "latitude": 31.005, "longitude": 121.005, "altitudeMeters": 5.0, "accuracyMeters": 40.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "dateline": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000005", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:06:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 0.0, "longitude": 179.0, "altitudeMeters": 0.0, "accuracyMeters": 20.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:06:00Z", "elapsedRealtimeNanos": 2, "latitude": 0.0, "longitude": -179.0, "altitudeMeters": 6.0, "accuracyMeters": 20.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "fast": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000006", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:05:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "accuracyMeters": 20.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:05:00Z", "elapsedRealtimeNanos": 2, "latitude": 32.0, "longitude": 122.0, "altitudeMeters": 5.0, "accuracyMeters": 20.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "accuracy500": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000007", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:01:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": null, "accuracyMeters": 500.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:01:00Z", "elapsedRealtimeNanos": 2, "latitude": 31.001, "longitude": 121.001, "altitudeMeters": null, "accuracyMeters": 500.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "accuracyOver500": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000008", "startedAt": "2026-08-09T04:00:00Z", "endedAt": "2026-08-09T04:01:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-09T04:00:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": null, "accuracyMeters": 500.001, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T04:01:00Z", "elapsedRealtimeNanos": 2, "latitude": 31.001, "longitude": 121.001, "altitudeMeters": null, "accuracyMeters": 500.001, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    },
+    "midnight": {
+      "schema": "gpslog.track/v1",
+      "session": { "id": "10000000-0000-4000-8000-000000000009", "startedAt": "2026-08-08T23:58:00Z", "endedAt": "2026-08-09T00:02:00Z", "timeZone": "Asia/Shanghai", "profile": "fixture", "targetIntervalSeconds": 240, "status": "completed", "gapCount": 0 },
+      "points": [
+        { "timestampUtc": "2026-08-08T23:58:00Z", "elapsedRealtimeNanos": 1, "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "accuracyMeters": 20.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true },
+        { "timestampUtc": "2026-08-09T00:02:00Z", "elapsedRealtimeNanos": 2, "latitude": 31.004, "longitude": 121.004, "altitudeMeters": 4.0, "accuracyMeters": 20.0, "verticalAccuracyMeters": null, "speedMps": null, "bearingDegrees": null, "provider": "fixture", "isMock": false, "usable": true }
+      ]
+    }
+  },
+  "cases": [
+    { "name": "exact_accuracy_200_is_high", "track": "sixMinutes", "photoTimestampUtc": "2026-08-09T04:00:00Z", "expected": { "confidence": "high", "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "horizontalErrorMeters": 200.0, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:00:00Z", "spanSeconds": 0.0, "warningContains": "exact track timestamp" } },
+    { "name": "six_minute_interval_is_high", "track": "sixMinutes", "photoTimestampUtc": "2026-08-09T04:03:00Z", "expected": { "confidence": "high", "latitude": 31.003, "longitude": 121.003, "altitudeMeters": 3.0, "horizontalErrorMeters": 200.0, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:06:00Z", "spanSeconds": 360.0, "warningContains": null } },
+    { "name": "ten_minute_interval_is_low", "track": "tenMinutes", "photoTimestampUtc": "2026-08-09T04:05:00Z", "expected": { "confidence": "low", "latitude": 31.005, "longitude": 121.005, "altitudeMeters": 5.0, "horizontalErrorMeters": 100.0, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:10:00Z", "spanSeconds": 600.0, "warningContains": "low confidence interval" } },
+    { "name": "over_ten_minutes_is_unmatched", "track": "overTenMinutes", "photoTimestampUtc": "2026-08-09T04:05:00Z", "expected": { "confidence": "unmatched", "latitude": null, "longitude": null, "altitudeMeters": null, "horizontalErrorMeters": null, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:10:00.001Z", "spanSeconds": 600.001, "warningContains": ">600s" } },
+    { "name": "first_point_180_seconds_is_low", "track": "sixMinutes", "photoTimestampUtc": "2026-08-09T03:57:00Z", "expected": { "confidence": "low", "latitude": 31.0, "longitude": 121.0, "altitudeMeters": 0.0, "horizontalErrorMeters": 200.0, "beforeTimestampUtc": null, "afterTimestampUtc": "2026-08-09T04:00:00Z", "spanSeconds": null, "warningContains": "extrapolated 180.0s" } },
+    { "name": "first_point_181_seconds_is_unmatched", "track": "sixMinutes", "photoTimestampUtc": "2026-08-09T03:56:59Z", "expected": { "confidence": "unmatched", "latitude": null, "longitude": null, "altitudeMeters": null, "horizontalErrorMeters": null, "beforeTimestampUtc": null, "afterTimestampUtc": null, "spanSeconds": null, "warningContains": ">180s" } },
+    { "name": "duplicate_uses_best_accuracy", "track": "duplicates", "photoTimestampUtc": "2026-08-09T04:00:00Z", "expected": { "confidence": "high", "latitude": 30.0, "longitude": 120.0, "altitudeMeters": 1.0, "horizontalErrorMeters": 5.0, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:00:00Z", "spanSeconds": 0.0, "warningContains": "exact track timestamp" } },
+    { "name": "dateline_uses_shortest_arc", "track": "dateline", "photoTimestampUtc": "2026-08-09T04:03:00Z", "expected": { "confidence": "low", "latitude": 0.0, "longitude": -180.0, "altitudeMeters": 3.0, "horizontalErrorMeters": 20.0, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:06:00Z", "spanSeconds": 360.0, "warningContains": "250 km/h" } },
+    { "name": "implied_speed_downgrades", "track": "fast", "photoTimestampUtc": "2026-08-09T04:02:00Z", "expected": { "confidence": "low", "latitude": 31.4, "longitude": 121.4, "altitudeMeters": 2.0, "horizontalErrorMeters": 20.0, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:05:00Z", "spanSeconds": 300.0, "warningContains": "250 km/h" } },
+    { "name": "accuracy_500_is_usable_low", "track": "accuracy500", "photoTimestampUtc": "2026-08-09T04:00:00Z", "expected": { "confidence": "low", "latitude": 31.0, "longitude": 121.0, "altitudeMeters": null, "horizontalErrorMeters": 500.0, "beforeTimestampUtc": "2026-08-09T04:00:00Z", "afterTimestampUtc": "2026-08-09T04:00:00Z", "spanSeconds": 0.0, "warningContains": "exact track timestamp" } },
+    { "name": "accuracy_over_500_is_unmatched", "track": "accuracyOver500", "photoTimestampUtc": "2026-08-09T04:00:00Z", "expected": { "confidence": "unmatched", "latitude": null, "longitude": null, "altitudeMeters": null, "horizontalErrorMeters": null, "beforeTimestampUtc": null, "afterTimestampUtc": null, "spanSeconds": null, "warningContains": "no usable points" } },
+    { "name": "utc_midnight_interpolates", "track": "midnight", "photoTimestampUtc": "2026-08-09T00:00:00Z", "expected": { "confidence": "high", "latitude": 31.002, "longitude": 121.002, "altitudeMeters": 2.0, "horizontalErrorMeters": 20.0, "beforeTimestampUtc": "2026-08-08T23:58:00Z", "afterTimestampUtc": "2026-08-09T00:02:00Z", "spanSeconds": 240.0, "warningContains": null } }
+  ]
+}

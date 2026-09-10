@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.GPSLog" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#006D40</item>
+        <item name="android:navigationBarColor">#F7FBF6</item>
+        <item name="android:statusBarColor">#F7FBF6</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

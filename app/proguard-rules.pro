@@ -1,0 +1,3 @@
+-keepattributes *Annotation*
+-keep class com.muchenhen.gpslog.data.** { *; }
+-keep class com.muchenhen.gpslog.export.** { *; }

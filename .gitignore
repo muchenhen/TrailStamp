@@ -1,0 +1,64 @@
+# Android / Gradle
+.gradle/
+.kotlin/
+**/build/
+local.properties
+*.jks
+*.keystore
+
+# Rust
+target/
+**/*.pdb
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Private and generated data
+*.NEF
+*.nef
+reports/
+GeoTagged/
+dist/
+exiftool-*/
+*.gpslog-backup
+
+# GitHub Actions is intentionally prohibited for this repository.
+/.github/workflows/
+
+# Local configuration, signing material, and credentials
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.pem
+*.key
+keystore.properties
+
+# Personal input and exported location data (fixtures are synthetic)
+/private/
+/tracks/
+/photos/
+/imports/
+/exports/
+*.gpx
+*.csv
+*.jsonl
+*.log
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+!fixtures/**/*.gpx
+!fixtures/**/*.csv
+
+# Generated preview plans and diagnostics
+plan.json
+apply-log.json
+summary.json
