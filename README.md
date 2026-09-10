@@ -1,8 +1,8 @@
-# GPSLog
+# TrailStamp
 
 **用 Android 记录轨迹，让相机照片拥有可核对的拍摄地点。**
 
-GPSLog combines an Android location recorder with a Rust photo-geotagging CLI.
+TrailStamp combines the GPSLog Android recorder with a Rust photo-geotagging CLI.
 Local recording, explicit previews, and verified writes to photo copies.
 
 这是一个面向摄影工作流的个人项目：手机保存轨迹，Rust 工具按照片时间匹配位置，
